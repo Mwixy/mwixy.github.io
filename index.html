@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Storii — Privacy Policy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --brand: #c15f3c;
+      --brand-light: #e8956d;
+      --brand-pale: #f7e8e2;
+      --mid: #b1ada1;
+      --mid-light: #d8d5cf;
+      --bg: #f4f3ee;
+      --white: #ffffff;
+      --text: #2d2926;
+      --text-mid: #6b6560;
+    }
+    body { background: var(--bg); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; min-height: 100vh; }
+    .site { max-width: 780px; margin: 0 auto; padding: 2rem 1.25rem 5rem; }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 2rem 2.5rem;
+      background: var(--white);
+      border-radius: 32px;
+      box-shadow: 0 8px 32px rgba(193,95,60,0.13), 0 2px 8px rgba(193,95,60,0.08), inset 0 1.5px 0 rgba(255,255,255,0.9);
+      margin-bottom: 2rem;
+      border: 1.5px solid rgba(255,255,255,0.85);
+    }
+    .logo { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 1.25rem; }
+    .logo-mark {
+      width: 52px; height: 52px; border-radius: 16px;
+      background: linear-gradient(145deg, #d4714a, #c15f3c);
+      box-shadow: 0 6px 18px rgba(193,95,60,0.35), inset 0 1.5px 0 rgba(255,255,255,0.3);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .logo-mark svg { width: 26px; height: 26px; fill: white; }
+    .logo-name { font-size: 26px; font-weight: 500; color: var(--text); letter-spacing: -0.5px; }
+    .logo-name span { color: var(--brand); }
+    .hero h1 { font-size: 22px; font-weight: 500; color: var(--text); margin-bottom: 0.4rem; }
+    .hero .date { font-size: 13px; color: var(--text-mid); background: var(--bg); display: inline-block; padding: 4px 14px; border-radius: 100px; margin-top: 0.5rem; }
+
+    .toc {
+      background: var(--brand);
+      border-radius: 28px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 28px rgba(193,95,60,0.25), inset 0 1.5px 0 rgba(255,255,255,0.2);
+    }
+    .toc-title { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; }
+    .toc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 6px 1rem; }
+    .toc-item { font-size: 14px; color: rgba(255,255,255,0.92); cursor: pointer; padding: 4px 0; text-decoration: none; display: flex; align-items: center; gap: 6px; }
+    .toc-item:before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.5); flex-shrink: 0; }
+    .toc-item:hover { color: white; }
+
+    .section {
+      background: var(--white);
+      border-radius: 28px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 6px 24px rgba(177,173,161,0.18), 0 2px 6px rgba(177,173,161,0.1), inset 0 1.5px 0 rgba(255,255,255,0.95);
+      border: 1.5px solid rgba(255,255,255,0.8);
+    }
+    .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 1.25rem; }
+    .section-num {
+      width: 32px; height: 32px; border-radius: 10px;
+      background: var(--brand-pale);
+      box-shadow: 0 3px 10px rgba(193,95,60,0.15), inset 0 1px 0 rgba(255,255,255,0.8);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 500; color: var(--brand); flex-shrink: 0;
+    }
+    .section h2 { font-size: 17px; font-weight: 500; color: var(--text); }
+    .section p { font-size: 15px; color: var(--text-mid); line-height: 1.75; margin-bottom: 0.75rem; }
+    .section p:last-child { margin-bottom: 0; }
+    .section a { color: var(--brand); text-decoration: none; }
+    .section a:hover { text-decoration: underline; }
+
+    .table-wrap { overflow-x: auto; margin: 1rem 0; border-radius: 18px; background: var(--bg); padding: 4px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th { padding: 10px 14px; text-align: left; font-weight: 500; color: var(--text); font-size: 13px; }
+    td { padding: 9px 14px; color: var(--text-mid); border-top: 1px solid var(--mid-light); vertical-align: top; }
+
+    .nope-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(195px, 1fr)); gap: 8px; margin: 1rem 0; }
+    .nope-item {
+      background: var(--bg);
+      border-radius: 14px;
+      padding: 0.65rem 1rem;
+      font-size: 13px; color: var(--text-mid);
+      display: flex; align-items: center; gap: 8px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+    }
+    .nope-dot { width: 7px; height: 7px; border-radius: 50%; background: #e05a5a; flex-shrink: 0; }
+
+    .highlight-box {
+      background: var(--brand-pale);
+      border-left: 3px solid var(--brand);
+      border-radius: 0 18px 18px 0;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+      font-size: 15px; color: var(--brand); line-height: 1.7;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+    }
+
+    .check-list { margin: 0.75rem 0; display: flex; flex-direction: column; gap: 8px; }
+    .check-item { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--text-mid); line-height: 1.6; }
+    .check-bubble {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: rgba(29,158,117,0.13);
+      box-shadow: 0 2px 6px rgba(29,158,117,0.15), inset 0 1px 0 rgba(255,255,255,0.7);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .check-bubble svg { width: 10px; height: 10px; stroke: #1D9E75; fill: none; stroke-width: 2.5; }
+
+    .rights-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin: 1rem 0; }
+    .right-card {
+      background: var(--bg);
+      border-radius: 18px;
+      padding: 1rem;
+      box-shadow: 0 3px 10px rgba(177,173,161,0.12), inset 0 1px 0 rgba(255,255,255,0.9);
+    }
+    .right-title { font-size: 13px; font-weight: 500; color: var(--brand); margin-bottom: 4px; }
+    .right-desc { font-size: 12px; color: var(--text-mid); line-height: 1.5; }
+
+    .contact-card {
+      background: var(--bg);
+      border-radius: 22px;
+      padding: 1.25rem 1.5rem;
+      display: flex; align-items: center; gap: 14px;
+      margin-top: 1rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.9);
+    }
+    .contact-avatar {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--brand-pale);
+      box-shadow: 0 4px 14px rgba(193,95,60,0.2), inset 0 1.5px 0 rgba(255,255,255,0.7);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; flex-shrink: 0;
+    }
+    .contact-info p { font-size: 15px; color: var(--text); font-weight: 500; margin-bottom: 3px; }
+    .contact-info a { font-size: 14px; color: var(--brand); }
+
+    .footer { text-align: center; padding-top: 2rem; font-size: 13px; color: var(--text-mid); }
+    .footer-badge {
+      display: inline-block;
+      background: var(--white);
+      border-radius: 100px;
+      padding: 8px 20px;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 4px 14px rgba(177,173,161,0.2), inset 0 1px 0 rgba(255,255,255,0.9);
+      font-size: 13px; color: var(--text-mid);
+    }
+
+    @media (max-width: 500px) {
+      .site { padding: 1rem 0.75rem 4rem; }
+      .hero { padding: 2rem 1.25rem 2rem; border-radius: 24px; }
+      .section { padding: 1.25rem 1.25rem; border-radius: 22px; }
+      .toc { border-radius: 22px; padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="site">
+  <div class="hero">
+    <div class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+      </div>
+      <span class="logo-name">Stor<span>ii</span></span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="date">Last updated: March 28, 2026</div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <div class="toc-grid">
+      <a class="toc-item" href="#s1">Data controller</a>
+      <a class="toc-item" href="#s2">What we collect</a>
+      <a class="toc-item" href="#s3">How we use your data</a>
+      <a class="toc-item" href="#s4">Push notifications</a>
+      <a class="toc-item" href="#s5">Storage &amp; security</a>
+      <a class="toc-item" href="#s6">Retention &amp; deletion</a>
+      <a class="toc-item" href="#s7">Children's privacy</a>
+      <a class="toc-item" href="#s8">Your rights</a>
+      <a class="toc-item" href="#s9">Third-party services</a>
+      <a class="toc-item" href="#s10">Data sharing</a>
+      <a class="toc-item" href="#s11">Policy changes</a>
+      <a class="toc-item" href="#s12">Contact</a>
+    </div>
+  </div>
+
+  <div class="section" id="s1">
+    <div class="section-header"><div class="section-num">1</div><h2>Data controller</h2></div>
+    <p>The data controller responsible for your personal data is <strong>Analyze Labs</strong>. You can reach us at <a href="mailto:kiregekm@gmail.com">kiregekm@gmail.com</a>.</p>
+  </div>
+
+  <div class="section" id="s2">
+    <div class="section-header"><div class="section-num">2</div><h2>What we collect</h2></div>
+    <p>We only collect information you directly provide when using the app. No background data collection, no behavior tracking, no third-party analytics.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Data</th><th>When collected</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>Email address</td><td>Account creation</td><td>Authentication, recovery</td></tr>
+          <tr><td>Display name</td><td>Profile setup</td><td>Shown on posts and profile</td></tr>
+          <tr><td>Username</td><td>Profile setup</td><td>Unique profile identifier</td></tr>
+          <tr><td>Profile photo</td><td>Optional, user-uploaded</td><td>Displayed on your profile</td></tr>
+          <tr><td>Stories &amp; comments</td><td>When you post</td><td>Core app functionality</td></tr>
+          <tr><td>Poll votes</td><td>When you vote</td><td>Displaying poll results</td></tr>
+          <tr><td>Alternate endings</td><td>When you submit</td><td>Community content</td></tr>
+          <tr><td>Friend list</td><td>When you add friends</td><td>Friends-only features</td></tr>
+          <tr><td>Blocked users list</td><td>When you block someone</td><td>Content filtering</td></tr>
+          <tr><td>Notification preferences</td><td>Settings changes</td><td>Controlling notifications</td></tr>
+          <tr><td>Language preference</td><td>Settings changes</td><td>App language</td></tr>
+          <tr><td>Deletion reason</td><td>Optional, on deletion</td><td>Anonymous internal feedback</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-weight:500; color: #2d2926; margin-top:1.25rem; margin-bottom: 0.6rem;">What we do not collect</p>
+    <div class="nope-grid">
+      <div class="nope-item"><div class="nope-dot"></div>Location or GPS data</div>
+      <div class="nope-item"><div class="nope-dot"></div>Device or advertising IDs</div>
+      <div class="nope-item"><div class="nope-dot"></div>Browsing history or analytics</div>
+      <div class="nope-item"><div class="nope-dot"></div>Cookies or tracking pixels</div>
+      <div class="nope-item"><div class="nope-dot"></div>Contacts, photos, or files</div>
+      <div class="nope-item"><div class="nope-dot"></div>Third-party service data</div>
+    </div>
+  </div>
+
+  <div class="section" id="s3">
+    <div class="section-header"><div class="section-num">3</div><h2>How we use your data</h2></div>
+    <p>Your data is used only to provide the service, authenticate you, send notifications, enable moderation, and optionally collect deletion feedback.</p>
+    <div class="highlight-box">We will never sell your data, use it for advertising, share it with third parties, or repost your content without your explicit permission.</div>
+  </div>
+
+  <div class="section" id="s4">
+    <div class="section-header"><div class="section-num">4</div><h2>Push notifications</h2></div>
+    <p>Storii may send push notifications for likes, comments, friend requests, and alternate endings. To deliver these, we may store a device token provided by your OS.</p>
+    <div class="check-list">
+      <div class="check-item"><div class="check-bubble"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Control which notifications you receive in Settings.</div>
+      <div class="check-item"><div class="check-bubble"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Disable all notifications in your device's system settings.</div>
+      <div class="check-item"><div class="check-bubble"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Device tokens are never shared with third parties.</div>
+    </div>
+  </div>
+
+  <div class="section" id="s5">
+    <div class="section-header"><div class="section-num">5</div><h2>Data storage &amp; security</h2></div>
+    <p>Your data is stored on Google Firebase servers in the European Union. Firebase provides TLS encryption in transit and encryption at rest.</p>
+    <p>Your password is handled entirely by Firebase Authentication — we never see, store, or have access to it. No system is 100% secure, but we take all reasonable measures to protect your data.</p>
+  </div>
+
+  <div class="section" id="s6">
+    <div class="section-header"><div class="section-num">6</div><h2>Data retention &amp; deletion</h2></div>
+    <p>Deleted posts and comments are immediately and permanently removed from our servers. We do not keep backups of deleted content.</p>
+    <p>When you delete your account, your profile, posts, and all associated data are permanently deleted. Any deletion reason you provided is stored anonymously only — it is not linked to your personal data after deletion. This action is irreversible.</p>
+    <p>We do not currently delete inactive accounts automatically. This policy may change with notice.</p>
+  </div>
+
+  <div class="section" id="s7">
+    <div class="section-header"><div class="section-num">7</div><h2>Children's privacy</h2></div>
+    <p>Storii requires users to be at least 13 years old. We do not knowingly collect data from children under 13. Age is self-declared during account creation.</p>
+    <p>If you believe a child under 13 is using Storii, contact us at <a href="mailto:kiregekm@gmail.com">kiregekm@gmail.com</a> and we will promptly delete their account.</p>
+  </div>
+
+  <div class="section" id="s8">
+    <div class="section-header"><div class="section-num">8</div><h2>Your rights</h2></div>
+    <div class="rights-grid">
+      <div class="right-card"><div class="right-title">Access</div><div class="right-desc">View your data in your profile and settings</div></div>
+      <div class="right-card"><div class="right-title">Correct</div><div class="right-desc">Edit your profile at any time</div></div>
+      <div class="right-card"><div class="right-title">Delete</div><div class="right-desc">Remove posts or your entire account</div></div>
+      <div class="right-card"><div class="right-title">Object</div><div class="right-desc">Contact us to object to processing</div></div>
+      <div class="right-card"><div class="right-title">Portability</div><div class="right-desc">Request a copy of your data (GDPR)</div></div>
+      <div class="right-card"><div class="right-title">Restrict</div><div class="right-desc">Limit how we process your data (GDPR)</div></div>
+    </div>
+    <p style="margin-top:1rem;">Users in Turkey have additional rights under KVKK (Law No. 6698). EU users are covered by GDPR. Our legal basis for processing is consent and legitimate interest. Contact <a href="mailto:kiregekm@gmail.com">kiregekm@gmail.com</a> to exercise any right.</p>
+  </div>
+
+  <div class="section" id="s9">
+    <div class="section-header"><div class="section-num">9</div><h2>Third-party services</h2></div>
+    <p>Storii uses Google Firebase for authentication, database (Firestore), and profile photo storage. Firebase is operated by Google LLC — their privacy policy is at <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a>.</p>
+    <p>We do not use any other third-party services, SDKs, analytics tools, or advertising networks.</p>
+  </div>
+
+  <div class="section" id="s10">
+    <div class="section-header"><div class="section-num">10</div><h2>Data sharing</h2></div>
+    <p>We do not share your personal data with anyone, except when required by law or a valid court order, or to protect the safety of our users in an emergency.</p>
+  </div>
+
+  <div class="section" id="s11">
+    <div class="section-header"><div class="section-num">11</div><h2>Changes to this policy</h2></div>
+    <p>We may update this Privacy Policy from time to time. Significant changes will be communicated through the app. Continued use of Storii after changes constitutes acceptance of the updated policy.</p>
+  </div>
+
+  <div class="section" id="s12">
+    <div class="section-header"><div class="section-num">12</div><h2>Contact</h2></div>
+    <p>For any questions, concerns, or requests related to your privacy:</p>
+    <div class="contact-card">
+      <div class="contact-avatar">✉</div>
+      <div class="contact-info">
+        <p>Analyze Labs</p>
+        <a href="mailto:kiregekm@gmail.com">kiregekm@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-badge">By using Storii, you agree to this Privacy Policy</div>
+    <p>© 2026 Analyze Labs · All rights reserved</p>
+  </div>
+</div>
+</body>
+</html>
